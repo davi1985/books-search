@@ -1,0 +1,66 @@
+header {
+  background: #3079ed;
+  padding: 1rem;
+  color: white;
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin-right: 1rem;
+    }
+
+    input {
+      padding: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      width: 100%;
+      max-width: 320px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      width: 5rem;
+      margin-left: 1rem;
+      background:white;
+      transition: filter .3s;
+      
+      &:hover {
+        filter: brightness(0.9);
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    @media only screen and (max-width: 720px) {
+      flex-direction: column;
+
+      h1 {
+        margin-right: 0;
+      }
+      input, button {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      button {
+        width: 100%;
+        max-width: 120px;
+        margin-left: 0;
+      }
+    }
+  }
+
+    
+  
+}
