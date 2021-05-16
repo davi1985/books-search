@@ -5,60 +5,10 @@ main {
     max-width: 1120px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-
-    .book {
-      display: flex;
-      width: 100%;
-      background: #f8f8f8;
-      padding: 1rem;
-      border-bottom: 1px solid rgb(228, 227, 227);
-      margin-bottom: 1rem;
-      border-radius: 0.25rem;
-      box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.2);
-
-      img {
-        width: 100%;
-        max-width: 150px;
-        margin-right: 1.5rem;
-      }
-      
-      .details {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-          
-          span {
-            font-size: 1rem;
-            margin-left: 1rem;
-            color: rgb(107, 107, 107)
-          }
-        }
-
-        p {
-          font-size: 1rem;
-          text-align: justify;
-        }
-
-        span {
-          margin-top: 2rem;
-          font-size: 0.9rem;
-          color: rgb(107, 107, 107)
-        }
-      }
-
-      @media only screen and (max-width: 520px) {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        
-      }
-    }
+    gap: 1rem;
+    justify-content: space-around;
+    
   }  
 }

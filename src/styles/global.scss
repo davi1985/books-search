@@ -31,3 +31,65 @@ h6 {
 button {
   cursor: pointer;
 }
+
+.react-modal-overlay {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.react-modal-content {
+  overflow-y: scroll;
+  max-height: 500px;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-width: 220px;
+    height:100%;
+    max-height: 330px;
+    box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  h2,h3,p {
+    padding: 0.5rem 0;
+  }
+
+  button {
+    margin-top: 0.5rem;
+    background:#3e84f5;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    transition: filter 0.3s;
+
+    &.close {
+      background:#eda430 !important;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      padding: 0.5rem;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
