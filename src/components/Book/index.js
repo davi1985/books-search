@@ -15,10 +15,10 @@ export function Book({
         alt={book.volumeInfo.title}
       />
 
-      {book.volumeInfo.title.length > 20 ? (
+      {book.volumeInfo.title.length > 25 ? (
         <p className="title">{`${book.volumeInfo.title.substring(
           0,
-          20
+          25
         )}...`}</p>
       ) : (
         <p className="title">{book.volumeInfo.title}</p>

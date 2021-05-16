@@ -16,7 +16,7 @@ export function Header({
             <span
               onClick={() =>
                 alert(
-                  `Tem ${favoritesBooksCounter} livro(s) adicionado(s) com favorito(s)!`
+                  `Tem ${favoritesBooksCounter} livro(s) adicionado(s) como favorito(s)!`
                 )
               }
             >

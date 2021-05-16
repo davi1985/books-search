@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import { Header } from './components/Header'
 import { Library } from './components/Library'
+import Modal from 'react-modal/lib/components/Modal'
 
 import { FaHeart } from 'react-icons/fa'
 
@@ -9,16 +10,16 @@ import { api } from './services/api'
 import { formattedDate } from './utils/utils'
 import parse from 'html-react-parser'
 
-import Modal from 'react-modal/lib/components/Modal'
-
 Modal.setAppElement('#root')
 
 export function App() {
   const [searchBookTitle, setSearhBookTitle] = useState('')
-  const [isOpenModal, setIsOpenModal] = useState(false)
   const [books, setBooks] = useState([])
+
   const [booksFavorites, setBooksFavorites] = useState([])
   const [bookSelect, setBookSelect] = useState([])
+
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   function closeModal() {
     setIsOpenModal(false)
@@ -28,7 +29,6 @@ export function App() {
     const bookFavoriteSelected = books.filter((book) => book.id === id)
 
     setBooksFavorites([...booksFavorites, bookFavoriteSelected])
-    console.log(booksFavorites.length)
   }
 
   function showMoreBookInfo(id) {
