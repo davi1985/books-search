@@ -58,5 +58,19 @@ header {
         height: 1rem;
       }
     }
-  }
+
+    @media(max-width:720px) {
+      flex-direction: column;
+
+      input {
+        margin-top: 1.2rem;
+        text-align: center;
+      }
+      button {
+        width: 320px;
+        margin-top: 1rem;
+        margin-left: 0;
+      }
+    }
+  } 
 }
