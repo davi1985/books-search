@@ -67,7 +67,8 @@ header {
         text-align: center;
       }
       button {
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         margin-top: 1rem;
         margin-left: 0;
       }

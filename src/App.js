@@ -6,8 +6,9 @@ import Modal from 'react-modal/lib/components/Modal'
 
 import { FaHeart } from 'react-icons/fa'
 
-import { api } from './services/api'
-import { formattedDate } from './utils/utils'
+import { allBooks } from './services/api'
+import { formattedDate } from './utils/formattedDate'
+
 import parse from 'html-react-parser'
 
 Modal.setAppElement('#root')
@@ -39,11 +40,10 @@ export function App() {
 
   async function handleSearchBookTitle() {
     if (searchBookTitle === '') return
-    const { REACT_APP_API_KEY } = process.env
 
-    await api
-      .get(`/volumes?q=${searchBookTitle}&key=${REACT_APP_API_KEY}`)
-      .then((response) => setBooks(response.data.items))
+    const books = await allBooks(searchBookTitle)
+
+    setBooks(books)
   }
 
   function handleSearchInput(event) {

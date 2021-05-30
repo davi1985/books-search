@@ -39,10 +39,9 @@ $ git clone https://github.com/davi1985/books-search
 # Access
 $ cd books-search
 
-# Creacte .env file
-$ touch .env
+# Rename file ..env.example to .env
 
-## Add in .env file the API_KEY - this information was send in email.
+## Add in .env file your Google API_KEY
 
 # Install dependencies
 $ yarn
