@@ -14,6 +14,8 @@ import parse from 'html-react-parser'
 Modal.setAppElement('#root')
 
 export function App() {
+  const [loading, setLoading] = useState(false)
+
   const [searchBookTitle, setSearhBookTitle] = useState('')
   const [books, setBooks] = useState([])
 
@@ -41,9 +43,13 @@ export function App() {
   async function handleSearchBookTitle() {
     if (searchBookTitle === '') return
 
+    setLoading(true)
+
     const books = await allBooks(searchBookTitle)
 
     setBooks(books)
+
+    setLoading(false)
   }
 
   function handleSearchInput(event) {
@@ -63,6 +69,7 @@ export function App() {
         setIsOpenModal={setIsOpenModal}
         showMoreBookInfo={showMoreBookInfo}
         addFavoriteBook={addFavoriteBook}
+        isLoading={loading}
       />
 
       <Modal
